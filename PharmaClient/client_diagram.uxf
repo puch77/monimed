@@ -1,0 +1,1039 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>540</w>
+      <h>1040</h>
+    </coordinates>
+    <panel_attributes>pharmaClient</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>640</x>
+      <y>10</y>
+      <w>850</w>
+      <h>1030</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1170</x>
+      <y>890</y>
+      <w>310</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::Cart
+--
+-elements: ArrayList&lt;CartElement&gt;
+--
++Cart(ArrayList&lt;CartElement&gt; elements): Cart
++Cart(String xmlString): Cart
++toXML(): String
++getters/setters
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>660</y>
+      <w>420</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::CartElement
+--
+-id: int
+-clientId: String
+-product: Product
+-amount: int
+-orderDate: LocalDate
+-isSent: Boolean
+--
++CartElement(): CartElement
++CartElement(int id, String clientId, Product product): CartElement
++CartElement(String xmlString): CartElement
++toXML(): String
++toString(): String
++getters/setters
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>60</y>
+      <w>420</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::Client
+--
+-userId: String
+-name: String
+-pass: String
+-address: String
+-email: String
+-tel: String
+-contactPerson: String
+-dateFrom: LocalDate
+-isAdmin: Boolean
+-isActive: Boolean
+--
++Client(): Client
++Client(String userId, String name, String pass, String address, 
+String email, String tel, String contactPerson, LocalDate dateFrom, 
+Boolean admin, Boolean active): Client
++Client(String xmlString): Client
++toString(): String
++toXML(): String
++getters/setters
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1130</x>
+      <y>60</y>
+      <w>290</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::ClientList
+--
+-clients: ArrayList&lt;Client&gt;
+--
++ClientList(ArrayList&lt;Client&gt; clients): Client
++ClientList(String xmlString): Client
++toXML(): String
++getters/setters
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>390</y>
+      <w>420</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::Product
+--
+-id: int
+-name: String
+-description: String
+-price: double
+-category: Category
+-amount: int
+-isActive: Boolean
+--
++Product(): Product
++Product(int id, String name, String description, double price, 
+String category, int amount, Boolean active): Product
++Product(String xmlString): Product
++toString(): String
++toXML(): String
++getters/setters
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1140</x>
+      <y>640</y>
+      <w>340</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::ProductList
+--
+-products: ArrayList&lt;Product&gt;
+--
++ProductList(): Product
++ProductList(ArrayList&lt;Product&gt; products): Product
++ProductList(String xmlString): Product
++toString(): String
++toXML(): String
++getters/setters
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>900</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::Report
+--
+-text: String
+--
++Report(): Report
++Report(String text): Report
++toXML(): String
++toString(): String
++getters/setters
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>330</y>
+      <w>430</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>pharmaClient::ProductFX
+--
+-modelProduct: Product
+-id: SimpleIntegerProperty
+-name: SimpleStringProperty
+-description: SimpleStringProperty
+-price: SimpleDoubleProperty
+-category: SimpleObjectProperty&lt;Category&gt;
+-amount: SimpleIntegerProperty
+-active: SimpleBooleanProperty
+--
++ProductFX(Product modelProduct): ProductFX
++toString(): String
++getters/setters
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>150</y>
+      <w>250</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=BLACK</panel_attributes>
+    <additional_attributes>230.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>420</y>
+      <w>250</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=BLACK</panel_attributes>
+    <additional_attributes>230.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>540</x>
+      <y>160</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>modelClient
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>540</x>
+      <y>430</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>modelProduct
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>670</x>
+      <y>160</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>670</x>
+      <y>430</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1300</x>
+      <y>180</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1300</x>
+      <y>600</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1300</x>
+      <y>850</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1120</x>
+      <y>790</y>
+      <w>50</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1...n
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1120</x>
+      <y>580</y>
+      <w>50</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1...n
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1120</x>
+      <y>210</y>
+      <w>50</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1...n
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1200</x>
+      <y>440</y>
+      <w>280</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::Category
+--
+-id: int
+-name: String
+--
++Category(int id, String name): Category
++Category(String xmlString): Category
++toXML(): String
++getters/setters</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1110</x>
+      <y>380</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=BLACK</panel_attributes>
+    <additional_attributes>190.0;60.0;190.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1310</x>
+      <y>410</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1120</x>
+      <y>390</y>
+      <w>50</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1...n
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1130</x>
+      <y>250</y>
+      <w>350</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::CategoryList
+--
+-categories: ArrayList&lt;Category&gt;
+--
++ClientList(ArrayList&lt;Category&gt; categories): Category
++ClientList(String xmlString): Category
++toXML(): String
++getters/setters
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1390</x>
+      <y>370</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1380</x>
+      <y>420</y>
+      <w>50</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1...n
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>40</y>
+      <w>430</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>pharmaClient::ClientFX
+--
+-modelClient: Client
+-userId: SimpleStringProperty
+-name: SimpleStringProperty
+-pass: SimpleStringProperty
+-address: SimpleStringProperty
+-email: SimpleStringProperty
+-tel: SimpleStringProperty
+-contactPerson: SimpleStringProperty
+-dateFrom: SimpleObjectProperty&lt;LocalDate&gt;
+-admin: SimpleBooleanProperty
+-active: SimpleBooleanProperty
+--
++ClientFX(Client modelClient): ClientFX
++toString(): String
++getters/setters
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>570</y>
+      <w>430</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>pharmaClient::CartElementFX
+--
+-modelCartElement: CartElement
+-id: SimpleIntegerProperty
+-clientId: SimpleStringProperty
+-product: SimpleObjectProperty&lt;Product&gt;
+-amount: SimpleIntegerProperty 
+-orderDate: SimpleObjectProperty&lt;LocalDate&gt;
+-isSent: SimpleBooleanProperty
+--
++CartElementFX(CartElement modelCartElement): CartElementFX
++toString(): String
++getters/setters
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>520</x>
+      <y>160</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>520</x>
+      <y>430</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>660</y>
+      <w>240</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=BLACK</panel_attributes>
+    <additional_attributes>220.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>540</x>
+      <y>670</y>
+      <w>140</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>modelCartElement
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>670</x>
+      <y>670</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>520</x>
+      <y>670</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>810</y>
+      <w>320</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>pharmaClient::PharmaException
+--
+-serialVersionUID = 1L: long
+--
++PharmaException(String text): PharmaException
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>890</y>
+      <w>520</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>pharmaClient::CreatePdf
+--
+~addBeginning(Document d, String n, Client c): void
+~addEnd(Document d): void
+~addTableToInvoice(Document d, ArrayList&lt;CartElement&gt; o): void
+~addTableToSalesReport(Document d, ObservableList&lt;CartElementFX&gt; ol): void
+~addTableToInventoryReport(Document d, ObservableList&lt;ProductFX&gt; ol): void
+~addEmptyLine(Paragraph p, int n): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1370</x>
+      <y>360</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1110</x>
+      <y>170</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>180.0;10.0;180.0;40.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1110</x>
+      <y>570</y>
+      <w>210</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;70.0;190.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1110</x>
+      <y>810</y>
+      <w>210</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;80.0;190.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1530</x>
+      <y>290</y>
+      <w>420</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::Product
+--
+-id: int
+-name: String
+-description: String
+-price: double
+-category: Category
+-amount: int
+-isActive: Boolean
+--
++Product(): Product
++Product(int id, String name, String description, double price, 
+String category, int amount, Boolean active): Product
++Product(String xmlString): Product
++toString(): String
++toXML(): String
++getters/setters
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1960</x>
+      <y>150</y>
+      <w>350</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::CategoryList
+--
+-categories: ArrayList&lt;Category&gt;
+--
++ClientList(ArrayList&lt;Category&gt; categories): Category
++ClientList(String xmlString): Category
++toXML(): String
++getters/setters
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2030</x>
+      <y>340</y>
+      <w>280</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::Category
+--
+-id: int
+-name: String
+--
++Category(int id, String name): Category
++Category(String xmlString): Category
++toXML(): String
++getters/setters</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2200</x>
+      <y>260</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1940</x>
+      <y>470</y>
+      <w>210</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;70.0;190.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1970</x>
+      <y>540</y>
+      <w>340</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::ProductList
+--
+-products: ArrayList&lt;Product&gt;
+--
++ProductList(): Product
++ProductList(ArrayList&lt;Product&gt; products): Product
++ProductList(String xmlString): Product
++toString(): String
++toXML(): String
++getters/setters
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1970</x>
+      <y>290</y>
+      <w>50</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1...n
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>2220</x>
+      <y>270</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>2130</x>
+      <y>310</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>2210</x>
+      <y>320</y>
+      <w>50</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1...n
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1950</x>
+      <y>480</y>
+      <w>50</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1...n
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>2130</x>
+      <y>500</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1540</x>
+      <y>720</y>
+      <w>420</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::Client
+--
+-userId: String
+-name: String
+-pass: String
+-address: String
+-email: String
+-tel: String
+-contactPerson: String
+-dateFrom: LocalDate
+-isAdmin: Boolean
+-isActive: Boolean
+--
++Client(): Client
++Client(String userId, String name, String pass, String address, 
+String email, String tel, String contactPerson, LocalDate dateFrom, 
+Boolean admin, Boolean active): Client
++Client(String xmlString): Client
++toString(): String
++toXML(): String
++getters/setters
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1970</x>
+      <y>720</y>
+      <w>290</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::ClientList
+--
+-clients: ArrayList&lt;Client&gt;
+--
++ClientList(ArrayList&lt;Client&gt; clients): Client
++ClientList(String xmlString): Client
++toXML(): String
++getters/setters
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1950</x>
+      <y>830</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>180.0;10.0;180.0;40.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>2140</x>
+      <y>840</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1960</x>
+      <y>870</y>
+      <w>50</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1...n
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2330</x>
+      <y>640</y>
+      <w>420</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::CartElement
+--
+-id: int
+-clientId: String
+-product: Product
+-amount: int
+-orderDate: LocalDate
+-isSent: Boolean
+--
++CartElement(): CartElement
++CartElement(int id, String clientId, Product product): CartElement
++CartElement(String xmlString): CartElement
++toXML(): String
++toString(): String
++getters/setters
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2740</x>
+      <y>750</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;10.0;190.0;50.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>2750</x>
+      <y>770</y>
+      <w>50</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1...n
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>2940</x>
+      <y>770</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2780</x>
+      <y>640</y>
+      <w>310</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::Cart
+--
+-elements: ArrayList&lt;CartElement&gt;
+--
++Cart(ArrayList&lt;CartElement&gt; elements): Cart
++Cart(String xmlString): Cart
++toXML(): String
++getters/setters
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1940</x>
+      <y>280</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;190.0;10.0;190.0;60.0</additional_attributes>
+  </element>
+</diagram>
