@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>546</x>
+      <y>402</y>
+      <w>186</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::Cart
+--
+-elements: ArrayList&lt;CartElement&gt;
+--
++Cart(ArrayList&lt;CartElement&gt; elements): Cart
++Cart(String xmlString): Cart
++toXML(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>402</y>
+      <w>252</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::CartElement
+--
+-id: int
+-clientId: String
+-product: Product
+--
++CartElement(): CartElement
++CartElement(int id, String clientId, Product product): CartElement
++CartElement(String xmlString): CartElement
++toXML(): String
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>24</y>
+      <w>252</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::Client
+--
+-userId: String
+-name: String
+-pass: String
+-address: String
+-email: String
+-tel: String
+-contactPerson: String
+-dateFrom: LocalDate
+-admin: Boolean
+-active: Boolean
+--
++Client(): Client
++Client(String userId, String name, String pass, String address, 
+String email, String tel, String contactPerson, LocalDate dateFrom, 
+Boolean admin, Boolean active): Client
++Client(String xmlString): Client
++toString(): String
++toXML(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>558</x>
+      <y>24</y>
+      <w>174</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::ClientList
+--
+-clients: ArrayList&lt;Client&gt;
+--
++ClientList(ArrayList&lt;Client&gt; clients): Client
++ClientList(String xmlString): Client
++toXML(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>228</y>
+      <w>252</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::Product
+--
+-id: int
+-name: String
+-description: String
+-price: double
+-category: String
+-amount: int
+-active: Boolean
+--
++Product(): Product
++Product(int id, String name, String description, double price, 
+String category, int amount, Boolean active): Product
++Product(String xmlString): Product
++toString(): String
++toXML(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>228</y>
+      <w>204</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::ProductList
+--
+-products: ArrayList&lt;Product&gt;
+--
++ProductList(): Product
++ProductList(ArrayList&lt;Product&gt; products): Product
++ProductList(String xmlString): Product
++toString(): String
++toXML(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>468</x>
+      <y>516</y>
+      <w>126</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses::Report
+--
+-text: String
+--
++Report(): Report
++Report(String text): Report
++toXML(): String
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>258</x>
+      <y>0</y>
+      <w>492</w>
+      <h>600</h>
+    </coordinates>
+    <panel_attributes>pharmaClasses</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
